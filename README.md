@@ -1,6 +1,8 @@
 # RadixSort
 
-One Paragraph of project description goes here
+The assignment wants to to create a program that randomly generates 1 million integers then sorts then
+using the method of radix sort. Radix sort is basically the same thing as a normal bucket sort, but instead
+uses only 10 buckets and divides the keys into subgroups based on their radix positions. It applies a bucket sort repeatedly for the key values on radix positions, starting from the least-significant position.
 
 ## Example Output
 
@@ -10,12 +12,13 @@ This image will display as your example output. Name the image README.jpg in you
 
 ## Analysis Steps
 
-This section should restate the assignment and explain how you analyzed the requirements in order 
-to develop a solution.
+The assignment wants to to create a program that randomly generates 1 million integers then sorts then
+using the method of radix sort. I analzyed the requirements by simply looking at what was given to me 
+and looking up what radix sort is in the pearson chapter to know what i'm supposed to be doing.
 
 ### Design
 
-How did you approach your program design? Did you use multiple classes to define various objects?
+I used only one class and the radix-sort method so that I may sort them as a radix-sort.
 
 ```
 Give examples
