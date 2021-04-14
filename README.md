@@ -18,7 +18,8 @@ and looking up what radix sort is in the pearson chapter to know what i'm suppos
 
 ### Design
 
-I used only one class and the radix-sort method so that I may sort them as a radix-sort.
+I used only one class and the radix-sort method so that I may sort them as a radix-sort, also the main method
+has the print statement and calls the sorting.
 
 ```
 Give examples
