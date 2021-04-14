@@ -22,10 +22,10 @@ I used only one class and the radix-sort method so that I may sort them as a rad
 has the print statement and calls the sorting.
 
 ```
-  int maxOrder = 1000000;
+  int max = 1000000;
   int[] list = new int[10]; 
   for (int i = 0; i < list.length; i++) {
-   list[i] = (int) (Math.random() * maxOrder);
+   list[i] = (int) (Math.random() * max);
   }
   
   radixSort(list);
@@ -36,19 +36,70 @@ has the print statement and calls the sorting.
 
 A step by step series of examples that you developed to properly test the program. 
 
-Say what the step will be
+Step 1: Generate Million integers
 
 ```
-Give the example
+int max = 1000000;
+  int[] list = new int[10]; 
+  for (int i = 0; i < list.length; i++) {
+   list[i] = (int) (Math.random() * max);
 ```
 
-And repeat
+Step 2: RadixSort Method
 
 ```
-until finished
+private static void radixSort(int[] list) {
+       
+         final int RAD = 10;
+    
+    // declare and initialize
+    List<Integer>[] bucket = new ArrayList[RAD];
+    
+    for (int i = 0; i < bucket.length; i++) {
+      bucket[i] = new ArrayList<Integer>();
+    }
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Step 3: Sorting arguments
+```
+ // sort
+    boolean maxLength = false;
+    int tmp = -1, placement = 1;
+    while (!maxLength) {
+      maxLength = true;
+      
+     
+      for (Integer i : list) {
+        tmp = i / placement;
+        bucket[tmp % RAD].add(i);
+        if (maxLength && tmp > 0) {
+          maxLength = false;
+        }
+      }
+      
+      int a = 0;
+      for (int b = 0; b < RAD; b++) {
+        for (Integer i : bucket[b]) {
+          list[a++] = i;
+        }
+        bucket[b].clear();
+      }
+      
+      // move to next digit
+      placement *= RAD;
+    }
+  }
+}
+```
+Step 4: Print the buckets and sort them using radixsort.
+```
+ radixSort(list);
+  System.out.println(Arrays.toString(list));
+ }
+```
+
+You can get some data on how radix sorting works by making this program, and you 
+can learn how to do radix sorting.
 
 ## Notes
 
