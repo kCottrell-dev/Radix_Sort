@@ -22,7 +22,14 @@ I used only one class and the radix-sort method so that I may sort them as a rad
 has the print statement and calls the sorting.
 
 ```
-Give examples
+  int maxOrder = 1000000;
+  int[] list = new int[10]; 
+  for (int i = 0; i < list.length; i++) {
+   list[i] = (int) (Math.random() * maxOrder);
+  }
+  
+  radixSort(list);
+  System.out.println(Arrays.toString(list));
 ```
 
 ### Testing
